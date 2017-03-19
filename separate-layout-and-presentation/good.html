@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Layout vs presentation</title>
+
+    <style>
+        /* Reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* End Reset */
+
+        /* Base/Shared */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* End Base/Shared */
+    </style>
+    <style>
+        /* Layout */
+        /* these respond to changes in the browser width */
+
+        .third-width.bordered:last-of-type {
+            border: 0;
+        }
+
+        @media (min-width: 761px) {
+            .mobile-friendly-row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .third-width {
+                width: 33.333%;
+            }
+            .third-width.bordered {
+                border-right: 1px solid red;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .mobile-friendly-row {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .third-width {
+                width: inherit;
+            }
+            .third-width.bordered {
+                border-bottom: 1px solid red;
+            }
+        }
+
+        /* End Layout */
+    </style>
+    <style>
+        /* Presentation */
+        /* these don't change as the layout responds */
+
+        .dark-theme {
+            background-color: black;
+            color: white;
+        }
+
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        /* End Presentation */
+    </style>
+</head>
+<body>
+    <div class="mobile-friendly-row dark-theme">
+        <div class="third-width bordered section">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="third-width bordered section">
+            <h2>Section 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="third-width bordered section">
+            <h2>Section 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    <!--
+
+    <div class="mobile-friendly-row light-theme">
+        <div class="third-width section">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="third-width section">
+            <h2>Section 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="third-width section">
+            <h2>Section 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
+    -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Layout vs presentation</title>
+
+    <style>
+        /* Reset */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* End Reset */
+
+        /* Base/Shared */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* End Base/Shared */
+    </style>
+    <style>
+        /* Layout and presentation */
+
+        .container {
+            display: flex;
+            flex-direction: row;
+
+            background-color: black;
+            color: white;
+        }
+
+        .section {
+            width: 33.333%;
+
+            border-right: 1px solid red;
+
+            padding: 20px;
+        }
+        .section:last-of-type {
+            border-right: 0;
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .section {
+                width: inherit;
+
+                border-right: 0;
+                border-bottom: 1px solid red;
+            }
+            .section:last-of-type {
+                border-bottom: 0;
+            }
+        }
+
+        /* End Layout and presentation */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="section">
+            <h2>Section 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="section">
+            <h2>Section 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+</body>
+</html>
