@@ -1,0 +1,26 @@
+{
+  "name": "js-hide-instead-of-by-class",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "webpack": "webpack --progress --colors",
+    "test": "mocha --compilers js:babel-core/register **/*.spec.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
+    "enzyme": "^2.7.1",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.2",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
